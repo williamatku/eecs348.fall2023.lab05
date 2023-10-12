@@ -1,4 +1,9 @@
 sales:
 	gcc -o sales.out sales.c 
 	./sales.out ./ex.txt
-	rm ./sales.out
+
+clean-sales:
+	rm ./sales.out ./sales_report.txt
+
+clean:
+	make clean-sales
