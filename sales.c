@@ -46,6 +46,7 @@ void get_months_in_descending_order(double* sales_by_month, int* dest);
 */
 void generate_sales_report_and_save(double* sales_ordered_by_month, int* max_to_min_sales_months);
 
+
 int main(int argc, char** argv) {
     // The user must pass in a file path, else return error
     if (argc != 2) return 1; 
@@ -168,5 +169,6 @@ void generate_sales_report_and_save(double* sales_ordered_by_month, int* max_to_
             sales_ordered_by_month[max_to_min_sales_months[i]]);
     }
 
+    // close the output file, sales report generation is complete
     fclose(output_file);
 }
